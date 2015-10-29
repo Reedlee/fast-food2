@@ -3,7 +3,7 @@ class CreateDishes < ActiveRecord::Migration
     create_table :dishes do |t|
       t.string :name
       t.decimal :price
-      t.text :decription
+      t.text :description
 
       t.timestamps null: false
     end
