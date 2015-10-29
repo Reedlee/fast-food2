@@ -1,0 +1,12 @@
+<% @restaurants.each do |restaurant|  %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%=	image_tag "/restaurants/#{restaurant.image_name}.png", alt:restaurant.name%>
+        <div class="caption">
+          <h4><%= restaurant.name %> </h4>
+          <p><%= restaurant.description %></p>
+          <p><%= link_to 'Открыть',(restaurant), class: 'btn btn-default' %></p>
+        </div>
+      </div>
+    </div>
+<% end %>
