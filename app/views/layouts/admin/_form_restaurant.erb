@@ -1,0 +1,43 @@
+<%= form_for [:admin, @restaurant],:html => {class:'form-horizontal col-md-9'}  do |f| %>
+
+    <div>
+      <% if @restaurant.errors.any?%>
+          <div class="errors book">
+            Total errors: <%= @restaurant.errors.count %>
+            <ul>
+              <% @restaurant.errors.full_messages.each do |message| %>
+                  <li> <%=	message  %></li>
+              <%	 end %>
+            </ul>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :name, class: 'col-md-3 control-label' %>
+      <div class="col-md-9">
+        <%= f.text_field :name, class: 'form-control'  %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :review, class: 'col-md-3 control-label'	  %>
+      <div class="col-md-9">
+        <%= f.text_area :review, class: 'form-control'  %>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label :image_name, class: 'col-md-3 control-label'	  %>
+      <div class="col-md-9">
+        <%= f.file_field :image_name, class: 'form-control'  %>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-lg btn-primary' %>
+    </div>
+
+<% end %>
