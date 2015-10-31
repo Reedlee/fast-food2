@@ -52,7 +52,7 @@ class Admin::RestaurantsController < AdminController
     uploaded_file = params[:restaurant][:image_name]
 
     if !uploaded_file.nil?
-      file_name = restaurant.name.to_s + File.extname(uploaded_file.original_filename)
+      file_name = restaurant.name.to_s
       new_file_path = Rails.root.join('public', 'restaurants', file_name)
 
       File.open(new_file_path, 'wb') do |file|
