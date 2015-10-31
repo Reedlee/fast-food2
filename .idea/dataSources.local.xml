@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="Rails fast-food2: development" uuid="2e52fc0b-f5d4-4581-be3c-0cf76f827ad9" />
-    <data-source name="Rails fast-food2: test" uuid="f668b4b0-4eb8-4a9b-a88c-bc1941e84677" />
-  </component>
-</project>
+<project version="4" />
