@@ -1,10 +1,9 @@
 <div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="..." alt="<%= @restaurant.name %>">
-      <%= image_tag Rails.root.join('public','uploads', 'restaurants', @restaurant.image_name), alt:@restaurant.name %>
-    </a>
+  <div class="thumbnail">
+    <%=	image_tag "/restaurants/#{@restaurant.image_name}", alt:@restaurant.name%>
+    <div class="caption">
+      <h4><%= @restaurant.name %> </h4>
+      <p><%= @restaurant.review %></p>
+    </div>
   </div>
-  <div><%= @restaurant.name %></div>
-  <div><%= @restaurant.description %></div>
 </div>

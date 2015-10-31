@@ -12,7 +12,7 @@
     <% @restaurants.each do |restaurant| %>
         <tr>
           <td><%= restaurant.name %></td>
-          <td><%= restaurant.description %></td>
+          <td><%= restaurant.review %></td>
           <td><%= image_tag "/restaurants/#{restaurant.image_name}.png", alt: restaurant.name, class: 'image-intro' %></td>
           <td>
             <%= link_to "Edit ", edit_admin_restaurant_path(restaurant) %>
