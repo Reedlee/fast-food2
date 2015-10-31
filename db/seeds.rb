@@ -5,9 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+2.times do
+  name = Faker::Name.name
+  User.create(name: name,
+              address: "#{Faker::Address.city}, #{Faker::Address.street_address}",
+              phone: Faker::PhoneNumber.cell_phone,
+              email: Faker::Internet.email(name),
+              password: 'password',
+              password_confirmation: 'password')
+end
+
 def logo_save(url_logo, title)
+
+  dir = Rails.root.join('public', 'restaurants')
+  Dir.mkdir(dir) unless File.directory?(dir)
   require 'open-uri'
-  new_file_path = Rails.root.join('public','restaurants', "#{title}.png")
+  new_file_path = Rails.root.join(dir, "#{title}.png")
   open(new_file_path, 'wb') do |file|
     file.write open(url_logo).read
   end
@@ -28,30 +43,10 @@ def create_dish(max_dish_id)
   Dish.create(name: name, price: price, description: description, restaurant_id: rand(1..max_dish_id))
 end
 
-
-
 10.times do
   create_restaurant
 end
 
 40.times do
   create_dish(10)
-end
-
-admin = User.create(name: 'admin',
-                    address: 'Aurora Borealis',
-                    phone: '(100) 100-1000',
-                    email: 'admin@example.com',
-                    password: 'adminadmin',
-                    password_confirmation: 'adminadmin',
-                    admin: true)
-
-2.times do
-  name = Faker::Name.name
-  User.create(name: name,
-              address: "#{Faker::Address.city}, #{Faker::Address.street_address}",
-              phone: Faker::PhoneNumber.cell_phone,
-              email: Faker::Internet.email(name),
-              password: 'password',
-              password_confirmation: 'password')
 end
