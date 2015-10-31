@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'restaurants#index'
   resources 'restaurants', 'dishes'
 
+  get '/admin' => 'admin#admin', as: :admin
+
   namespace :admin do
     resources :dishes, :restaurants
   end

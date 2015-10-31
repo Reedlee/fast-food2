@@ -9,7 +9,7 @@ class Admin::RestaurantsController < AdminController
   end
 
   def new
-    Restaurant.new
+    @restaurant = Restaurant.new
   end
 
   def create
