@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root 'restaurants#index'
   resources 'restaurants', 'dishes'
 
+  namespace :admin do
+    resources :dishes, :restaurants
+  end
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
