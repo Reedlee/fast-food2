@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1906890940">
-    <data-source source="LOCAL" name="Rails fast-food2: development" uuid="f061494e-077c-41eb-821f-51afd8c1f421">
+  <component name="DataSourceManagerImpl" format="xml" hash="3571231920">
+    <data-source source="LOCAL" name="Rails fast-food2: development" uuid="969e4b4f-8967-49b8-8c73-e4e21928edb3">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
-    <data-source source="LOCAL" name="Rails fast-food2: test" uuid="6da02e30-38ef-4933-8bf9-0576f55cf9aa">
+    <data-source source="LOCAL" name="Rails fast-food2: test" uuid="3b7316fe-1d41-447c-bdbb-dfe4ba34ec53">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
